@@ -16,6 +16,14 @@
   "description": "",
   "main": "app.js",
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iqbaalpratama/api-gateway.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iqbaalpratama/api-gateway/issues"
+  },
+  "homepage": "https://github.com/iqbaalpratama/api-gateway#readme"
 }
