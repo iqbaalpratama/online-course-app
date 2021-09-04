@@ -24,7 +24,6 @@ class Course extends Model
     }
     public function images()
     {
-        return $this->hasMany('Images');
+        return $this->hasMany('ImageCourse')->orderBy('id', 'DESC');
     }
-
 }
