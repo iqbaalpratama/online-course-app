@@ -7,6 +7,8 @@ use App\Http\Controllers\LessonController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MentorController;
+use App\Http\Controllers\MyCourseController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +28,7 @@ Route::put('/mentors/{id}', [MentorController::class, 'update']);
 Route::delete('/mentors/{id}', [MentorController::class, 'destroy']);
 
 Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/courses/{id}', [CourseController::class, 'show']);
 Route::post('/courses', [CourseController::class, 'create']);
 Route::put('/courses/{id}', [CourseController::class, 'update']);
 Route::delete('/courses/{id}', [CourseController::class, 'destroy']);
@@ -44,3 +47,10 @@ Route::delete('/lessons/{id}', [LessonController::class, 'destroy']);
 
 Route::post('/image-courses', [ImageCourseController::class, 'create']);
 Route::delete('/image-courses/{id}', [ImageCourseController::class, 'destroy']);
+
+Route::get('/my-courses', [MyCourseController::class, 'index']);
+Route::post('/my-courses', [MyCourseController::class, 'create']);
+
+Route::post('/reviews', [ReviewController::class, 'create']);
+Route::put('/reviews/{id}', [ReviewController::class, 'update']);
+Route::delete('/reviews/{id}', [ReviewController::class, 'destroy']);
