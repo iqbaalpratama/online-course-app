@@ -9,6 +9,7 @@ const mediaRouter = require('./routes/media');
 const usersRouter = require('./routes/users');
 const refreshTokensRouter = require('./routes/refreshTokens');
 const mentorsRouter = require('./routes/mentors');
+const coursesRouter = require('./routes/courses');
 
 const verifyToken = require('./middleware/verifyToken');
 const app = express();
@@ -23,6 +24,7 @@ app.use('/', indexRouter);
 app.use('/media', mediaRouter);
 app.use('/users', usersRouter);
 app.use('/mentors', verifyToken, mentorsRouter);
+app.use('/courses', coursesRouter);
 app.use('/refresh-tokens', refreshTokensRouter);
 
 module.exports = app;

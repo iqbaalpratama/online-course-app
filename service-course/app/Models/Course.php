@@ -16,14 +16,14 @@ class Course extends Model
 
     public function mentor()
     {
-        return $this->belongsTo('Mentor');
+        return $this->belongsTo(Mentor::class);
     }
     public function chapters()
     {
-        return $this->hasMany('Chapter')->orderBy('id', 'ASC');
+        return $this->hasMany(Chapter::class)->orderBy('id', 'ASC');
     }
     public function images()
     {
-        return $this->hasMany('ImageCourse')->orderBy('id', 'DESC');
+        return $this->hasMany(ImageCourse::class)->orderBy('id', 'DESC');
     }
 }

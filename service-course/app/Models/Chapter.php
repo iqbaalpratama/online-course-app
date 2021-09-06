@@ -15,6 +15,6 @@ class Chapter extends Model
 
     public function lessons()
     {
-        return $this->hasMany('Lesson')->orderBy('id', 'ASC');
+        return $this->hasMany(Lesson::class)->orderBy('id', 'ASC');
     }
 }
